@@ -1,0 +1,417 @@
+/* ==========================================================================
+   1. Base & Theme Variables
+   ========================================================================== */
+:root {
+    --bg-primary: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --border-color: #cbd5e1;
+    --accent-blue: #2563eb;
+    --accent-hover: #1d4ed8;
+    --header-bg: #0f172a;
+    --header-text: #f8fafc;
+    --about-bg: #eff6ff;
+    --about-border: #3b82f6;
+    --table-header: #f1f5f9;
+    --error-color: #dc2626;
+    --success-bg: #f0fdf4;
+    --success-border: #16a34a;
+}
+
+/* Dark Theme Overrides */
+body.dark-theme {
+    --bg-primary: #0f172a;
+    --bg-card: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --border-color: #334155;
+    --accent-blue: #3b82f6;
+    --accent-hover: #60a5fa;
+    --header-bg: #020617;
+    --header-text: #ffffff;
+    --about-bg: #1e293b;
+    --about-border: #60a5fa;
+    --table-header: #334155;
+    --success-bg: #064e3b;
+    --success-border: #22c55e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   2. Header & Navigation
+   ========================================================================== */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 2rem 1rem 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0 0 1.25rem 0;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+nav a {
+    color: #f1f5f9;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.theme-toggle-container {
+    margin-top: 1rem;
+}
+
+/* ==========================================================================
+   3. Main Content & Sections
+   ========================================================================== */
+main {
+    max-width: 950px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    color: #ffffff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-banner h2 {
+    color: #ffffff;
+    margin-top: 0;
+    border: none;
+}
+
+.hero-banner p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+/* General Section Styling */
+.content-section {
+    background-color: var(--bg-card);
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+#about {
+    background-color: var(--about-bg);
+    border-left: 5px solid var(--about-border);
+}
+
+h2 {
+    color: var(--accent-blue);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+h3 {
+    color: var(--text-primary);
+    margin-top: 1.25rem;
+}
+
+ul, ol {
+    padding-left: 1.25rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   4. Projects & Expandable Cards
+   ========================================================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.expandable-content {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--border-color);
+    font-size: 0.9rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================================================
+   5. Photo Gallery & Media
+   ========================================================================== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.gallery figure {
+    margin: 0;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.gallery figcaption {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.media-container {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+video, audio {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
+
+.media-summary {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   6. Table Styling
+   ========================================================================== */
+.table-container {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table caption {
+    caption-side: top;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--table-header);
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   7. Buttons & Form Styling
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.primary-btn {
+    background-color: var(--accent-blue);
+    color: #ffffff;
+}
+
+.primary-btn:hover,
+.primary-btn:focus {
+    background-color: var(--accent-hover);
+}
+
+.secondary-btn {
+    background-color: #334155;
+    color: #ffffff;
+    border: 1px solid #475569;
+}
+
+.secondary-btn:hover {
+    background-color: #475569;
+}
+
+.toggle-details-btn {
+    background-color: transparent;
+    color: var(--accent-blue);
+    border: 1px solid var(--accent-blue);
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.toggle-details-btn:hover {
+    background-color: var(--accent-blue);
+    color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.error-msg {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.demo-badge {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Form Preview & Calculation Result Boxes */
+.preview-box, .result-message {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    border-radius: 6px;
+    background-color: var(--success-bg);
+    border: 1px solid var(--success-border);
+}
+
+.preview-box h3 {
+    margin-top: 0;
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   8. Footer & Media Queries
+   ========================================================================== */
+footer {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Media Query */
+@media (max-width: 600px) {
+    .content-section {
+        padding: 1.25rem 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .hero-banner {
+        padding: 1.75rem 1rem;
+    }
+}

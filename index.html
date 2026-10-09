@@ -1,0 +1,268 @@
+​​​<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailes Victoria Ngoma - Interactive Web Portfolio</title>
+    <!-- Linked CSS Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Deferred JavaScript File -->
+    <script src="js/script.js" defer></script>
+</head>
+<body class="light-theme">
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1>Mailes Victoria Ngoma</h1>
+            <p>Student ID: 202506139 | BSc Computer Science | ICT251 Web Technologies</p>
+            
+            <!-- Navigation -->
+            <nav>
+                <a href="#about">About Me</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#learning">Learning Plan</a>
+                <a href="#projects">Projects & Skills</a>
+                <a href="#calculator">Study Calculator</a>
+                <a href="#photos">Photos</a>
+                <a href="#media">Media</a>
+                <a href="#contact">Contact</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank" rel="noopener noreferrer">MDN Docs</a>
+            </nav>
+
+            <!-- JS Feature 1: Theme Switch Toggle -->
+            <div class="theme-toggle-container">
+                <button id="theme-toggle-btn" class="btn secondary-btn">Switch to Dark Theme</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero / Intro Banner -->
+        <section class="hero-banner">
+            <h2>Welcome to My Student Portfolio</h2>
+            <p>Exploring modern front-end technologies, responsive user interfaces, and interactive JavaScript web applications.</p>
+            <a href="#projects" class="btn primary-btn">View My Projects</a>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>
+                My name is Mailes Victoria Ngoma, a dedicated Computer Science student passionate about technology and software development. 
+                I am currently taking Web Technologies to gain a comprehensive understanding of semantic HTML5, CSS layout systems, responsive design principles, and dynamic JavaScript user interactions. 
+                My ultimate goal is to build secure, scalable, and user-centered web software that solves practical daily problems and enhances digital access.
+            </p>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Listening to inspiring music and exploring audio editing tools</li>
+                <li>Reading spiritual and educational literature</li>
+                <li>Practising Python and Web Development programming challenges</li>
+            </ul>
+        </section>
+
+        <!-- Learning Plan Section -->
+        <section id="learning" class="content-section">
+            <h2>My Learning Plan</h2>
+            <p>Here are three realistic steps I am taking to strengthen my development skills:</p>
+            <ol>
+                <li>Practice HTML5 semantics and modern CSS layout techniques daily in Visual Studio Code.</li>
+                <li>Build interactive user interface components with DOM-manipulation JavaScript.</li>
+                <li>Study official documentation and guidelines to implement responsive and accessible websites.</li>
+            </ol>
+
+            <h3>Weekly Schedule</h3>
+            <div class="table-container">
+                <table>
+                    <caption>Weekly Web Development Schedule</caption>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Topic</th>
+                            <th>Practice Task</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>HTML5 Semantics & Structure</td>
+                            <td>Design clean section layouts and structured input forms.</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>CSS Box Model & Styling</td>
+                            <td>Apply padding, borders, Flexbox grids, and color palettes.</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>JavaScript & DOM Interaction</td>
+                            <td>Write event handlers, form validation scripts, and dynamic UI logic.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Projects & Skills Section (Part B Requirement) -->
+        <section id="projects" class="content-section">
+            <h2>Projects & Skills</h2>
+            <p>Here are three key areas of technical competence I have developed during my studies:</p>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <h3>1. JavaFX GUI Application</h3>
+                    <p>Designed a desktop GUI program utilizing Java Development Kit 21 and Gradle build settings.</p>
+                    <button class="btn toggle-details-btn" data-target="project1-details">Show Details</button>
+                    <!-- JS Feature 2: Expandable Content -->
+                    <div id="project1-details" class="expandable-content hidden">
+                        <p><strong>Key Highlights:</strong> Configured clean scene layouts, managed Git source control, and published structured project repositories to GitHub.</p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <h3>2. Python OpenCV & Scripting</h3>
+                    <p>Developed Python programs covering string slicing, data structures, and computer vision libraries.</p>
+                    <button class="btn toggle-details-btn" data-target="project2-details">Show Details</button>
+                    <!-- JS Feature 2: Expandable Content -->
+                    <div id="project2-details" class="expandable-content hidden">
+                        <p><strong>Key Highlights:</strong> Set up virtual workspace directories in PyCharm and VS Code, integrated `cv2` for image processing, and formatted console data outputs.</p>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <h3>3. Responsive Personal Website</h3>
+                    <p>Constructed a fully responsive front-end site using HTML5, CSS3 box model rules, and JavaScript DOM scripts.</p>
+                    <button class="btn toggle-details-btn" data-target="project3-details">Show Details</button>
+                    <!-- JS Feature 2: Expandable Content -->
+                    <div id="project3-details" class="expandable-content hidden">
+                        <p><strong>Key Highlights:</strong> Built mobile-ready Flexbox layouts, embedded media players, added form validation, and deployed via Render.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- JS Feature 3: Study Hours Calculator Section -->
+        <section id="calculator" class="content-section">
+            <h2>Study Hours Calculator</h2>
+            <p>Plan your weekly web technology study schedule by entering your target hours below:</p>
+            
+            <form id="study-calc-form" class="calc-form">
+                <div class="form-group">
+                    <label for="hours-per-day">Planned Study Hours Per Day:</label>
+                    <input type="number" id="hours-per-day" min="0.5" max="24" step="0.5" placeholder="e.g., 2">
+                </div>
+
+                <div class="form-group">
+                    <label for="days-per-week">Days Per Week (1 to 7):</label>
+                    <input type="number" id="days-per-week" min="1" max="7" step="1" placeholder="e.g., 5">
+                </div>
+
+                <button type="submit" class="btn primary-btn">Calculate Weekly Hours</button>
+            </form>
+
+            <div id="calc-result" class="result-message hidden"></div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section id="photos" class="content-section">
+            <h2>My Photo Gallery</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/photo1.jpg" alt="A desk workstation with a laptop running code editor">
+                    <figcaption>My workstation setup where I develop web applications.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo2.jpg" alt="Computer science and web technology notebooks on a desk">
+                    <figcaption>Reference notebooks and study guides for coursework.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo3.jpg" alt="A quiet campus study area">
+                    <figcaption>The university library study space during quiet hours.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media" class="content-section">
+            <h2>My Media</h2>
+
+            <div class="media-container">
+                <h3>Self-Introduction Video</h3>
+                <video controls>
+                    <source src="videos/intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="media-summary"><strong>Summary:</strong> In this video introduction, I outline my personal goals as a Computer Science student and share my focus on mastering web frontend engineering.</p>
+            </div>
+
+            <div class="media-container">
+                <h3>Audio Reflection: Learning Web Technologies</h3>
+                <audio controls>
+                    <source src="videos/voice.mp4" type="video/mp4">
+                    Your browser does not support the audio tag.
+                </audio>
+                <p class="media-summary"><strong>Summary:</strong> A brief audio recording discussing my strategy for studying HTML, CSS, JavaScript, and user-centered design principles.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section & Compulsory JS Form Validation -->
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <p><small class="demo-badge">Browser demonstration only — no message is sent to a server.</small></p>
+
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="contact-name">Full Name:</label>
+                    <input type="text" id="contact-name" name="name" required>
+                    <span id="name-error" class="error-msg"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-email">Email Address:</label>
+                    <input type="email" id="contact-email" name="email" required>
+                    <span id="email-error" class="error-msg"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-topic">Topic:</label>
+                    <select id="contact-topic" name="topic">
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Study Collaboration">Study Collaboration</option>
+                        <option value="Website Feedback">Website Feedback</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-message">Message:</label>
+                    <textarea id="contact-message" name="message" rows="4" required></textarea>
+                    <span id="message-error" class="error-msg"></span>
+                </div>
+
+                <button type="submit" class="btn primary-btn">Submit Form</button>
+            </form>
+
+            <!-- Compulsory JS Feature: Form Summary Preview Box -->
+            <div id="form-preview" class="preview-box hidden">
+                <h3>Form Submission Preview</h3>
+                <div id="preview-content"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Mailes Victoria Ngoma | ICT251 Web Technologies</p>
+        <p>
+            <a id="github-repo-link" href="https://github.com" target="_blank" rel="noopener noreferrer">View Source on GitHub</a>
+        </p>
+    </footer>
+
+</body>
+</html>
